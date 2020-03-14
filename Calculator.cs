@@ -12,8 +12,6 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             Console.Title = "aplikasi kalkulator";
-           // int a = 10; 
-            // int b = 6; 
 
             Console.Write("Inputkan Nilai a =");
             int a = int.Parse(Console.ReadLine());
