@@ -1,46 +1,77 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-namespace ConsoleApp1
+namespace calculator
 {
-    class Program
+ public class Calculator{
+    static void Main(string[] args)
     {
+        Console.Title = "Calculator";
+        Console.Write("Pilih Menu Kalkulator = ")
+        Console.Write("1.Penjumlahan\n2.Pengurangan\n3.Perkalian\n4.Pembagian\n");
+        Console.Write("Pilihan Anda = ");
+        int pilihan = int.Parse(Console.ReadLine());
 
-        static void Main(string[] args)
-        {
-            Console.Title = "aplikasi kalkulator";
-
-            Console.Write("Inputkan Nilai a =");
+        Console.WriteLine();
+        if (pilihan==1){
+            Console.Write("Masukan Angka Pertama = ");
             int a = int.Parse(Console.ReadLine());
-            Console.Write("Inputkan Nilai b =");
+    
+            Console.Write("Masukan Angka Kedua = ");
             int b = int.Parse(Console.ReadLine());
 
-            Console.WriteLine();
+            Console.WriteLine("Hasil Penambahan  {0} + {1} = {2}", a, b, penambahan(a,b));
+        }else if (pilihan==2){
+            Console.Write("Masukan Angka Pertama = ");
+            int a = int.Parse(Console.ReadLine());
+    
+            Console.Write("Masukan Angka Kedua = ");
+            int b = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("hasil penambahan" + a + "+" + b + "=" + penambahan(a, b));
-            Console.WriteLine("hasil pengurangan {0} - {1}    ={2}", a, b, pengurangan(a, b));
-            Console.WriteLine("hasil perkalian {0} * {1}      ={2}", a, b, perkalian(a, b));
-            Console.WriteLine("hasil pembagian {0}/{1}        ={2}", a, b, pembagian(a, b));
-            Console.ReadKey();
-        }
-        static int penambahan(int a, int b)
-        {
-            return a + b;
-        }
-        static int pengurangan(int a, int b)
-        {
-            return a - b;
-        }
-        static int perkalian(int a, int b)
-        {
-            return a * b;
-        }
-        static int pembagian(int a, int b)
-        {
-            return a / b;
-        }
+            Console.WriteLine("Hasil Pengurangan {0} - {1} = {2}", a, b, pengurangan(a,b));
+        }else if (pilihan==3){
+            Console.Write("Masukan Angka Pertama = ");
+            int a = int.Parse(Console.ReadLine());
+    
+            Console.Write("Masukan Angka Kedua = ");
+            int b = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Hasil Perkalian   {0} * {1} = {2}", a, b, perkalian(a,b));
+        }else if (pilihan==4){
+            Console.Write("Masukan Angka Pertama = ");
+            int a = int.Parse(Console.ReadLine());
+    
+            Console.Write("Masukan Angka Kedua = ");
+            int b = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Hasil Pembagian   {0} / {1} = {2}", a, b, pembagian(a,b));
+        }else{
+            Console.WriteLine("Maaf Tidak Ada Pilihan Lain");
+            
+		}
+        Console.WriteLine("Silahkan Tekan Tombol");
+        Console.ReadLine();
     }
-}
+    static int penambahan(int a, int b)
+    {
+        return a+b;
+    }
+    
+    static int pengurangan(int a, int b)
+    {
+        return a-b;
+    }
+    
+    static int perkalian(int a, int b)
+    {
+        return a*b;
+    }
+    
+    static int pembagian(int a, int b)
+    {
+        return a/b;
+    }
+
+    }
+    }
